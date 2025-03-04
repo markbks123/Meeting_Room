@@ -1,0 +1,39 @@
+.menu{  
+    width: 100% ;
+  
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.menuContainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.w-25 {
+    width: calc(100% / 4 - 3rem / 4);
+  }
+  
+  .w-30 {
+    width: calc(100% / 3 - 2rem / 3);
+  }
+  
+  .w-40 {
+    width: calc(40% - 0.5rem);
+  }
+  
+  .w-50 {
+    width: calc(50% - 0.5rem);
+  }
+  
+  .w-60 {
+    width: calc(60% - 0.5rem);
+  }
+  
+  .w-100 {
+    width: calc(100% - 0rem);
+  }
