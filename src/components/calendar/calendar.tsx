@@ -4,7 +4,7 @@ const CalendarContainer:React.FC =() =>{
     
   
       return(
-               <div className={styles.cotainer}>
+               <div className={styles.container}>
                   <div className={styles.calendar}>
                   <MyCalendar/> 
                   </div>
