@@ -1,3 +1,8 @@
+.calendar{
+  align-items: center;
+}
+
+
 .w-25 {
     width: calc(100% / 4 - 3rem / 4);
   }
