@@ -1,0 +1,82 @@
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    align-items: flex-start; 
+    z-index: 9999;
+  
+}
+
+.container > label {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-align: left; 
+    width: 100%;
+}
+
+.container > label span {
+    color: #e63946;
+}
+
+.container > .password {
+    cursor: pointer;
+    top: 2.6rem;
+    right: 1rem;
+    @apply absolute;
+  }
+  
+ 
+  
+
+  
+  
+  .container > .icon ~ input {
+    padding-right: 2rem;
+  }
+  
+  .container > .password ~ input {
+    padding-right: 2rem;
+  }
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.container > input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: white;
+    font-size: 14px;
+}
+
+.container > input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.container > input.error {
+    border-color: #e63946;
+    background-color: #fff5f5;
+}
+
+.container > input.error:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 4px rgba(230, 57, 70, 0.2);
+}
+
+.container > small {
+    color: #e63946;
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: left; 
+    width: 100%;
+}

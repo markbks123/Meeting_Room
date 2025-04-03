@@ -5,13 +5,14 @@ import Header from "../share/header/header";
 import Menu from "../share/menu/menu";
 
 const Layout: React.FC<LayoutContainerProps> = ({ children }) => {
-  const {} = useLayout();
+  const { pathname} = useLayout();
 
   return (
-    <div className={styles.cotainer}>
+    <div className={styles.container}>
       <main>
-        <Header />
-        <div className={styles.menuContainer}>
+       
+        { pathname  === "/signIn" ?     <></>: (<div className={styles.menuContainer}>
+          <Header />
           <div className={styles.menu}>
             <Menu
               title={"Booking"}
@@ -29,7 +30,7 @@ const Layout: React.FC<LayoutContainerProps> = ({ children }) => {
               onChange={() => {}}
             />
           </div>
-        </div>
+        </div>)}
         {children}
       </main>
     </div>
