@@ -1,0 +1,47 @@
+.input {
+    width: 100%;
+    height: 48px;
+    
+  }
+  
+  .error {
+    margin-top: 8px;
+    border-color: var(--error-color-1);
+    color: var(--error-color-1);
+  }
+  
+  .customOption > p {
+    color: var(--error-color-1);
+    font-size: medium;
+    font-weight: 300;
+  }
+  .customOption {
+    color: #007bff;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+  
+  .customDropdown {
+    white-space: normal;
+    word-break: break-word; /* เพื่อให้ตัดคำในกรณีที่ข้อความยาว */
+    line-height: 1.2; /* ปรับระยะห่างระหว่างบรรทัด */
+    
+  }
+
+  
+  .container>label {
+
+    font-size:18px;
+    font-weight:400;
+
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   
+  
+}
