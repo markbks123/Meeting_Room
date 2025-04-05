@@ -3,6 +3,7 @@ import { CalendarFromProps } from "./calendar.types";
 import styles from "./calendar.from.module.css";
 
 import RangeDateInput from "../share/rangePicker/rangPicker";
+import Selecter from "../share/select/select";
 
 const CalendarFrom = ({
   values,
@@ -16,21 +17,51 @@ const CalendarFrom = ({
 }: CalendarFromProps) => {
   return (
     <Form className={styles.container}>
+      <div className={styles.header}>
+        <h2>Filter</h2>
+      </div>
       <section className={styles.form}>
-        <div className={styles.header}>
-          <h2>Booking</h2>
-        </div>
         <div>
-          <RangeDateInput name="dateRange" required />
+          <RangeDateInput name="dateRange" label="Date" />
         </div>
-        <div>
-          <button type="submit" className={styles.submit}>
-            SUBMIT
-          </button>
+
+        <div className={styles.selecter}>
+          <Selecter
+            name="dssdsds"
+            options={[
+              {
+                value: "1",
+                label: "ADD",
+              },
+              {
+                value: "2",
+                label: "Friday",
+              },
+              {
+                value: "3",
+                label: "RVP",
+              },
+            ]}
+            label="Team"
+          />
         </div>
+        
       </section>
     </Form>
   );
 };
 
 export default CalendarFrom;
+
+{
+  /* <div>
+<button type="submit" className={styles.submit}>
+ Booking
+</button>
+</div>
+<div>
+<button type="submit" className={styles.submit}>
+ Booking
+</button>
+</div> */
+}

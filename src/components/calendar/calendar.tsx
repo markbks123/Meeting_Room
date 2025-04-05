@@ -1,13 +1,13 @@
+"use client";
 import { Form, Formik, FormikProps } from "formik";
 import MyCalendar from "../share/calendar/calendar";
-import DateRangePickerFormik from "../share/rangePicker/rangPicker";
+
 import styles from "./calendar.module.css";
 import { CalendarFromKeysProps } from "./calendar.types";
 import { initialValues } from "./calendar.utils";
-import { DatePicker, Space } from "antd";
-import RangeDateInput from "../share/rangePicker/rangPicker";
+
 import CalendarFrom from "./calendar.from";
-const { RangePicker } = DatePicker;
+
 const CalendarContainer: React.FC = () => {
   return (
     <div className={styles.container}>
@@ -23,9 +23,30 @@ const CalendarContainer: React.FC = () => {
             return <CalendarFrom handleSignInClick={() => {}} {...props} />;
           }}
         </Formik>
-
-        <MyCalendar />
+        <div className= {styles.fitterContainer}>
+        <div className={styles["w-30"]}>
+          <button type="submit" className={styles.submit}>
+             Search
+          </button>
+        </div>
+        </div>
+       
+     
       </div>
+      <div className= {styles.addContainer}>
+          <div>
+          <button type="submit" className={styles.submit}>
+            Booking
+          </button>
+          </div>
+          <div>
+          <button type="submit" className={styles.submit}>
+          history
+          </button>
+          </div>
+        </div>
+     
+        <MyCalendar />
     </div>
   );
 };

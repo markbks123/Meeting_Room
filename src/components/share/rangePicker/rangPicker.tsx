@@ -1,3 +1,5 @@
+
+"use client"
 import { ConfigProvider, DatePicker } from "antd";
 import th from "antd/es/date-picker/locale/th_TH";
 import cx from "classnames";
@@ -8,11 +10,13 @@ import { useField } from "formik";
 import styles from "./rangePicker.module.css";
 import { RangeDateInputProps } from "./rangePicker.types";
 
+// 📌 Setup dayjs for Thai and Buddhist Era
 dayjs.extend(buddhistEra);
+dayjs.locale("th");
 
 const { RangePicker } = DatePicker;
 
-const RangeDateInput = ({
+const RangeDateInput= ({
   name,
   label,
   className,
@@ -29,6 +33,7 @@ const RangeDateInput = ({
   const handleRangeChange = (dates: any) => {
     helper.setValue(dates);
     helper.setTouched(true);
+    onChange(dates);
   };
 
   return (
@@ -44,14 +49,14 @@ const RangeDateInput = ({
           {label} {required && <span>*</span>}
         </label>
       )}
-      <ConfigProvider>
+      <ConfigProvider >
         <RangePicker
-          {...field}
           className={styles.rangePickerMod}
+          value={field.value}
           onChange={handleRangeChange}
           placeholder={["Start Date", "End Date"]}
           disabledDate={disabledDate}
-          format="DD/MM/BBBB" // ตั้งค่ารูปแบบวันที่ตามที่ต้องการ
+          format="DD/MM/BBBB"
           disabled={disabled}
         />
       </ConfigProvider>
