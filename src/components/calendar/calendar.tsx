@@ -7,6 +7,7 @@ import { CalendarFromKeysProps } from "./calendar.types";
 import { initialValues } from "./calendar.utils";
 
 import CalendarFrom from "./calendar.from";
+import HistoryComponent from "../history/history";
 
 const CalendarContainer: React.FC = () => {
   return (
@@ -45,8 +46,8 @@ const CalendarContainer: React.FC = () => {
           </button>
           </div>
         </div>
-     
-        <MyCalendar />
+        <HistoryComponent />
+        {/* <MyCalendar /> */}
     </div>
   );
 };
